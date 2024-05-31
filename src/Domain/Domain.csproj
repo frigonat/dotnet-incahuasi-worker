@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Common.props" />
+  <PropertyGroup>
+    <RootNamespace>dotnet_incahuasi_worker.Domain</RootNamespace>
+    <AssemblyName>dotnet_incahuasi_worker.Domain</AssemblyName>
+    <Version>8.2.2</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Andreani.ARQ.AMQStreams" Version="8.4.1" />
+    <PackageReference Include="Andreani.Arq.Core.Relational" Version="8.4.1" />
+    <PackageReference Include="Andreani.ARQ.CQRS" Version="8.4.1" />
+    <PackageReference Include="Andreani.Onboarding.Event" Version="6.0.0" />
+  </ItemGroup>
+</Project>

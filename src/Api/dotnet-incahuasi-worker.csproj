@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <Import Project="..\..\Build\Common.props" />
+  <PropertyGroup>
+    <Version>8.2.2</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="appsettings.Development.yml" />
+    <None Remove="appsettings.Testing.yml" />
+    <None Remove="appsettings.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.Testing.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appsettings.Development.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appsettings.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <UserSecretsId>e56b67cb-0a17-4e98-9cf5-4a2fd652aa3f</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Andreani.Arq.Core.Relational" Version="8.4.1" />
+    <PackageReference Include="Andreani.Arq.Cqrs" Version="8.4.1" />
+    <PackageReference Include="Andreani.Arq.Observability.ElasticApm" Version="8.4.1" />
+    <PackageReference Include="Andreani.ARQ.WebHost" Version="8.4.1" />
+    <PackageReference Include="Andreani.Onboarding.Event" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+</Project>

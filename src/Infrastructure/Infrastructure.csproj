@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Common.props" />
+  <PropertyGroup>
+    <RootNamespace>dotnet_incahuasi_worker.Infrastructure</RootNamespace>
+    <AssemblyName>dotnet_incahuasi_worker.Infrastructure</AssemblyName>
+    <Version>8.2.2</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Andreani.Arq.Core.Relational" Version="8.4.1" />
+    <PackageReference Include="Andreani.ARQ.CQRS" Version="8.4.1" />
+    <PackageReference Include="Andreani.Onboarding.Event" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

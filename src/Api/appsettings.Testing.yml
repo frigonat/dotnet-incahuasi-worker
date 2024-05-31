@@ -1,0 +1,16 @@
+DataAccessRegistry:
+  Name: "default"
+  ReadOnlyConnection: "Data Source=NB100791\\SQLEXPRESS;Initial Catalog=challenger;Persist Security Info=True;User ID=challenger;Password=seisMiles;TrustServerCertificate=true"
+  TransactionalConnection: "Data Source=NB100791\\SQLEXPRESS;Initial Catalog=challenger;Persist Security Info=True;User ID=challenger;Password=seisMiles;TrustServerCertificate=true"
+  ProviderName: System.Data.SqlClient
+
+AMQStreams:
+ GroupId: "Onboarding-PedidosAsignadosSuscriber-Fernando-local" ## definir grupo
+ BootstrapServer : "SSL://cluster-kafka-bootstrap-amq-streams-test.apps.ocptest.andreani.com.ar:443"
+ SchemaUrl : "http://apicurioregistry.apps.ocptest.andreani.com.ar/apis/ccompat/v6"
+ Protocol : "Ssl"
+ SslCertificateLocation : "./kafka.pem"
+ EnableSslCertificateVerification: false
+ AutoOffsetReset : "Earliest"
+ AutoRegisterSchemas : true
+ MaxRetry: 3 ## definir cantidad de reintentos

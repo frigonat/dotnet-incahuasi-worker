@@ -1,0 +1,5 @@
+DataAccessRegistry:
+  Name: "default"
+  ReadOnlyConnection: "Data Source=DBONBOARDDESA.andreani.com.ar;Initial Catalog=Onboarding;Persist Security Info=True;User ID=User_Onboarding;Password=0jp9dQALTMkOMVC0Wss2;TrustServerCertificate=true"
+  TransactionalConnection: "Data Source=DBONBOARDDESA.andreani.com.ar;Initial Catalog=Onboarding;Persist Security Info=True;User ID=User_Onboarding;Password=0jp9dQALTMkOMVC0Wss2;TrustServerCertificate=true"
+  ProviderName: System.Data.SqlClient

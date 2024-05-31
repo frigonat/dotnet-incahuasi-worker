@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\Build\Common.props" />
+  <PropertyGroup>
+    <RootNamespace>dotnet_incahuasi_worker.Application</RootNamespace>
+    <AssemblyName>dotnet_incahuasi_worker.Application</AssemblyName>
+    <Version>8.2.2</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Andreani.Arq.Core.Relational" Version="8.4.1" />
+    <PackageReference Include="Andreani.Arq.Cqrs" Version="8.4.1" />
+    <PackageReference Include="Andreani.Arq.Observability" Version="8.4.1" />
+    <PackageReference Include="Andreani.Onboarding.Event" Version="6.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UseCase\V2\" />
+  </ItemGroup>
+</Project>
