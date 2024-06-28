@@ -11,7 +11,7 @@
     <PackageReference Include="Andreani.Arq.Cqrs" Version="8.4.1" />
     <PackageReference Include="Andreani.Onboarding.Event" Version="6.0.0" />
     <PackageReference Include="AutoFixture" Version="4.18.1" />
-    <PackageReference Include="coverlet.msbuild" Version="6.0.0">
+    <PackageReference Include="coverlet.msbuild" Version="6.0.2">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
